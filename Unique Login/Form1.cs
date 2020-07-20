@@ -35,10 +35,30 @@ namespace Unique_Login
         private void btn_copy_username_Click(object sender, EventArgs e)
         {
 
+           if ( string.IsNullOrEmpty(tbox_username.Text))
+            {
+                MessageBox.Show("Empty!");
+            } else
+            {
+                System.Windows.Forms.Clipboard.SetText(tbox_username.Text);
+
+            }
+
         }
 
         private void btn_copy_password_Click(object sender, EventArgs e)
         {
+
+
+            if (string.IsNullOrEmpty(tbox_password.Text))
+            {
+                MessageBox.Show("Empty!");
+            }
+            else
+            {
+                System.Windows.Forms.Clipboard.SetText(tbox_password.Text);
+
+            }
 
         }
 
@@ -55,7 +75,6 @@ namespace Unique_Login
             var generatedPassword = "";
             var lengthOfPassword = nbox_lengh_of_password.Value;
             var randomPassword = "";
-
 
 
             // usernames control flow below
@@ -84,10 +103,6 @@ namespace Unique_Login
                 generatedUsername += username;
             }
 
-            tbox_username.Text = generatedUsername.ToString();
-
-
-
 
             // password contorl flow below
             if (cbox_uppercase.Checked)
@@ -115,9 +130,11 @@ namespace Unique_Login
                 generatedPassword += password;
             }
 
+
+            // error handling if user didn't select anyhing
             if (string.IsNullOrEmpty(generatedPassword))
             {
-                MessageBox.Show("na");
+                MessageBox.Show("Check at least one username and password type!");
             } else
             {
                 for (var i = 0; i < lengthOfPassword; i++)
@@ -126,13 +143,13 @@ namespace Unique_Login
                 }
 
                 tbox_password.Text = randomPassword.ToString();
+                tbox_username.Text = generatedUsername.ToString();
+
             }
+        }
 
-
-
-
-
-
+        private void clearToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
         }
     }
