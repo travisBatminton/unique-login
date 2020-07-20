@@ -43,7 +43,6 @@ namespace Unique_Login
             } else
             {
                 System.Windows.Forms.Clipboard.SetText(tbox_username.Text);
-
             }
 
         }
