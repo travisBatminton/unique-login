@@ -201,7 +201,7 @@
             // 
             this.lbl_length_of_password.AutoSize = true;
             this.lbl_length_of_password.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_length_of_password.Location = new System.Drawing.Point(53, 461);
+            this.lbl_length_of_password.Location = new System.Drawing.Point(41, 463);
             this.lbl_length_of_password.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lbl_length_of_password.Name = "lbl_length_of_password";
             this.lbl_length_of_password.Size = new System.Drawing.Size(136, 16);
