@@ -16,6 +16,8 @@ namespace Unique_Login
         {
             InitializeComponent();
             nbox_lengh_of_password.Value = 12;
+
+
         }
 
         private void aboutAuthorToolStripMenuItem_Click(object sender, EventArgs e)
@@ -150,7 +152,18 @@ namespace Unique_Login
 
         private void clearToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            cbox_animal.Checked = false;
+            cbox_adjective.Checked = false;
+            cbox_verb.Checked = false;
+            cbox_noun.Checked = false;
 
+            cbox_uppercase.Checked = false;
+            cbox_lowercase.Checked = false;
+            cbox_number.Checked = false;
+            cbox_special.Checked = false;
+
+            tbox_password.Clear();
+            tbox_username.Clear();
         }
     }
 }
