@@ -45,42 +45,94 @@ namespace Unique_Login
         private void btn_generate_Click(object sender, EventArgs e)
         {
             Login login = new Login();
+            Random random = new Random();
 
-            List <string> username = new List<string>();
+            List<string> usernames = new List<string>();
+            List<string> passwords = new List<string>();
 
-            var result = "";
 
+            var generatedUsername = "";
+            var generatedPassword = "";
+            var lengthOfPassword = nbox_lengh_of_password.Value;
+            var randomPassword = "";
+
+
+
+            // usernames control flow below
             if (cbox_adjective.Checked)
             {
-                username.Add(login.RandomAdjective());
+                usernames.Add(login.RandomAdjective());
             }
 
             if (cbox_animal.Checked)
             {
-                username.Add(login.RandomAnimal());
+                usernames.Add(login.RandomAnimal());
             }
 
             if (cbox_noun.Checked)
             {
-                username.Add(login.RandomNoun());
+                usernames.Add(login.RandomNoun());
             }
 
             if (cbox_verb.Checked)
             {
-                username.Add(login.RandomVerb());
+                usernames.Add(login.RandomVerb());
             }
 
-
-
-
-            foreach (string elements in username)
+            foreach (string username in usernames)
             {
-                result += elements;
+                generatedUsername += username;
             }
 
-            tbox_password.Text = result.ToString();
+            tbox_username.Text = generatedUsername.ToString();
 
- 
+
+
+
+            // password contorl flow below
+            if (cbox_uppercase.Checked)
+            {
+                passwords.Add(login.upercase);
+            }
+
+            if (cbox_lowercase.Checked)
+            {
+                passwords.Add(login.lowercase);
+            }
+
+            if (cbox_number.Checked)
+            {
+                passwords.Add(login.number);
+            }
+
+            if (cbox_special.Checked)
+            {
+                passwords.Add(login.special);
+            }
+
+            foreach (string password in passwords)
+            {
+                generatedPassword += password;
+            }
+
+            if (string.IsNullOrEmpty(generatedPassword))
+            {
+                MessageBox.Show("na");
+            } else
+            {
+                for (var i = 0; i < lengthOfPassword; i++)
+                {
+                    randomPassword += generatedPassword[random.Next(generatedPassword.Length)];
+                }
+
+                tbox_password.Text = randomPassword.ToString();
+            }
+
+
+
+
+
+
 
         }
     }
