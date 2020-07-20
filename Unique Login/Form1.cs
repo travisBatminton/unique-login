@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -163,6 +164,12 @@ namespace Unique_Login
 
             tbox_password.Clear();
             tbox_username.Clear();
+        }
+
+        private void pbox_logo_Click(object sender, EventArgs e)
+        {
+            ProcessStartInfo sInfo = new ProcessStartInfo("https://www.github.com/wajeht");
+            Process.Start(sInfo);
         }
     }
 }
