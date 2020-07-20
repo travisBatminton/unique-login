@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.cbox_adjective = new System.Windows.Forms.CheckBox();
             this.cbox_animal = new System.Windows.Forms.CheckBox();
             this.cbox_verb = new System.Windows.Forms.CheckBox();
@@ -54,15 +55,17 @@
             this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutAuthorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pbox_logo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.nbox_lengh_of_password)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbox_logo)).BeginInit();
             this.SuspendLayout();
             // 
             // cbox_adjective
             // 
             this.cbox_adjective.AutoSize = true;
             this.cbox_adjective.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbox_adjective.Location = new System.Drawing.Point(104, 276);
+            this.cbox_adjective.Location = new System.Drawing.Point(95, 390);
             this.cbox_adjective.Margin = new System.Windows.Forms.Padding(1);
             this.cbox_adjective.Name = "cbox_adjective";
             this.cbox_adjective.Size = new System.Drawing.Size(84, 20);
@@ -74,7 +77,7 @@
             // 
             this.cbox_animal.AutoSize = true;
             this.cbox_animal.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbox_animal.Location = new System.Drawing.Point(104, 196);
+            this.cbox_animal.Location = new System.Drawing.Point(95, 310);
             this.cbox_animal.Margin = new System.Windows.Forms.Padding(1);
             this.cbox_animal.Name = "cbox_animal";
             this.cbox_animal.Size = new System.Drawing.Size(69, 20);
@@ -86,7 +89,7 @@
             // 
             this.cbox_verb.AutoSize = true;
             this.cbox_verb.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbox_verb.Location = new System.Drawing.Point(104, 224);
+            this.cbox_verb.Location = new System.Drawing.Point(95, 338);
             this.cbox_verb.Margin = new System.Windows.Forms.Padding(1);
             this.cbox_verb.Name = "cbox_verb";
             this.cbox_verb.Size = new System.Drawing.Size(56, 20);
@@ -98,7 +101,7 @@
             // 
             this.cbox_noun.AutoSize = true;
             this.cbox_noun.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbox_noun.Location = new System.Drawing.Point(104, 251);
+            this.cbox_noun.Location = new System.Drawing.Point(95, 365);
             this.cbox_noun.Margin = new System.Windows.Forms.Padding(1);
             this.cbox_noun.Name = "cbox_noun";
             this.cbox_noun.Size = new System.Drawing.Size(60, 20);
@@ -109,7 +112,7 @@
             // tbox_username
             // 
             this.tbox_username.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbox_username.Location = new System.Drawing.Point(206, 434);
+            this.tbox_username.Location = new System.Drawing.Point(200, 526);
             this.tbox_username.Margin = new System.Windows.Forms.Padding(1);
             this.tbox_username.Name = "tbox_username";
             this.tbox_username.Size = new System.Drawing.Size(173, 23);
@@ -119,7 +122,7 @@
             // tbox_password
             // 
             this.tbox_password.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbox_password.Location = new System.Drawing.Point(206, 472);
+            this.tbox_password.Location = new System.Drawing.Point(200, 564);
             this.tbox_password.Margin = new System.Windows.Forms.Padding(1);
             this.tbox_password.Name = "tbox_password";
             this.tbox_password.Size = new System.Drawing.Size(173, 23);
@@ -129,7 +132,7 @@
             // btn_generate
             // 
             this.btn_generate.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_generate.Location = new System.Drawing.Point(220, 557);
+            this.btn_generate.Location = new System.Drawing.Point(214, 649);
             this.btn_generate.Margin = new System.Windows.Forms.Padding(1);
             this.btn_generate.Name = "btn_generate";
             this.btn_generate.Size = new System.Drawing.Size(95, 28);
@@ -141,7 +144,7 @@
             // btn_copy_username
             // 
             this.btn_copy_username.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_copy_username.Location = new System.Drawing.Point(395, 432);
+            this.btn_copy_username.Location = new System.Drawing.Point(389, 524);
             this.btn_copy_username.Margin = new System.Windows.Forms.Padding(1);
             this.btn_copy_username.Name = "btn_copy_username";
             this.btn_copy_username.Size = new System.Drawing.Size(65, 27);
@@ -153,7 +156,7 @@
             // btn_copy_password
             // 
             this.btn_copy_password.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_copy_password.Location = new System.Drawing.Point(395, 472);
+            this.btn_copy_password.Location = new System.Drawing.Point(389, 564);
             this.btn_copy_password.Margin = new System.Windows.Forms.Padding(1);
             this.btn_copy_password.Name = "btn_copy_password";
             this.btn_copy_password.Size = new System.Drawing.Size(65, 27);
@@ -165,7 +168,7 @@
             // nbox_lengh_of_password
             // 
             this.nbox_lengh_of_password.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nbox_lengh_of_password.Location = new System.Drawing.Point(206, 369);
+            this.nbox_lengh_of_password.Location = new System.Drawing.Point(200, 461);
             this.nbox_lengh_of_password.Margin = new System.Windows.Forms.Padding(1);
             this.nbox_lengh_of_password.Name = "nbox_lengh_of_password";
             this.nbox_lengh_of_password.Size = new System.Drawing.Size(173, 23);
@@ -176,7 +179,7 @@
             // 
             this.lbl_username.AutoSize = true;
             this.lbl_username.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_username.Location = new System.Drawing.Point(110, 440);
+            this.lbl_username.Location = new System.Drawing.Point(104, 532);
             this.lbl_username.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lbl_username.Name = "lbl_username";
             this.lbl_username.Size = new System.Drawing.Size(76, 16);
@@ -187,7 +190,7 @@
             // 
             this.lbl_password.AutoSize = true;
             this.lbl_password.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_password.Location = new System.Drawing.Point(110, 475);
+            this.lbl_password.Location = new System.Drawing.Point(104, 567);
             this.lbl_password.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lbl_password.Name = "lbl_password";
             this.lbl_password.Size = new System.Drawing.Size(73, 16);
@@ -198,7 +201,7 @@
             // 
             this.lbl_length_of_password.AutoSize = true;
             this.lbl_length_of_password.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_length_of_password.Location = new System.Drawing.Point(59, 369);
+            this.lbl_length_of_password.Location = new System.Drawing.Point(53, 461);
             this.lbl_length_of_password.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lbl_length_of_password.Name = "lbl_length_of_password";
             this.lbl_length_of_password.Size = new System.Drawing.Size(136, 16);
@@ -209,7 +212,7 @@
             // 
             this.lbl_username_preference.AutoSize = true;
             this.lbl_username_preference.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_username_preference.Location = new System.Drawing.Point(87, 164);
+            this.lbl_username_preference.Location = new System.Drawing.Point(78, 278);
             this.lbl_username_preference.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lbl_username_preference.Name = "lbl_username_preference";
             this.lbl_username_preference.Size = new System.Drawing.Size(149, 16);
@@ -220,7 +223,7 @@
             // 
             this.lbl_password_preference.AutoSize = true;
             this.lbl_password_preference.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_password_preference.Location = new System.Drawing.Point(314, 164);
+            this.lbl_password_preference.Location = new System.Drawing.Point(305, 278);
             this.lbl_password_preference.Name = "lbl_password_preference";
             this.lbl_password_preference.Size = new System.Drawing.Size(146, 16);
             this.lbl_password_preference.TabIndex = 14;
@@ -230,7 +233,7 @@
             // 
             this.cbox_uppercase.AutoSize = true;
             this.cbox_uppercase.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbox_uppercase.Location = new System.Drawing.Point(332, 198);
+            this.cbox_uppercase.Location = new System.Drawing.Point(323, 312);
             this.cbox_uppercase.Name = "cbox_uppercase";
             this.cbox_uppercase.Size = new System.Drawing.Size(131, 20);
             this.cbox_uppercase.TabIndex = 15;
@@ -241,7 +244,7 @@
             // 
             this.cbox_lowercase.AutoSize = true;
             this.cbox_lowercase.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbox_lowercase.Location = new System.Drawing.Point(332, 226);
+            this.cbox_lowercase.Location = new System.Drawing.Point(323, 340);
             this.cbox_lowercase.Name = "cbox_lowercase";
             this.cbox_lowercase.Size = new System.Drawing.Size(128, 20);
             this.cbox_lowercase.TabIndex = 16;
@@ -252,7 +255,7 @@
             // 
             this.cbox_number.AutoSize = true;
             this.cbox_number.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbox_number.Location = new System.Drawing.Point(332, 253);
+            this.cbox_number.Location = new System.Drawing.Point(323, 367);
             this.cbox_number.Name = "cbox_number";
             this.cbox_number.Size = new System.Drawing.Size(111, 20);
             this.cbox_number.TabIndex = 17;
@@ -263,7 +266,7 @@
             // 
             this.cbox_special.AutoSize = true;
             this.cbox_special.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbox_special.Location = new System.Drawing.Point(332, 278);
+            this.cbox_special.Location = new System.Drawing.Point(323, 392);
             this.cbox_special.Name = "cbox_special";
             this.cbox_special.Size = new System.Drawing.Size(153, 20);
             this.cbox_special.TabIndex = 18;
@@ -297,14 +300,14 @@
             // 
             this.saveToolStripMenuItem.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.saveToolStripMenuItem.Text = "Save";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -332,11 +335,22 @@
             this.clearToolStripMenuItem.Text = "Clear";
             this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
             // 
+            // pbox_logo
+            // 
+            this.pbox_logo.Image = global::Unique_Login.Properties.Resources.private_512;
+            this.pbox_logo.Location = new System.Drawing.Point(181, 55);
+            this.pbox_logo.Name = "pbox_logo";
+            this.pbox_logo.Size = new System.Drawing.Size(169, 161);
+            this.pbox_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbox_logo.TabIndex = 20;
+            this.pbox_logo.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(545, 635);
+            this.ClientSize = new System.Drawing.Size(545, 723);
+            this.Controls.Add(this.pbox_logo);
             this.Controls.Add(this.cbox_special);
             this.Controls.Add(this.cbox_number);
             this.Controls.Add(this.cbox_lowercase);
@@ -357,6 +371,7 @@
             this.Controls.Add(this.cbox_animal);
             this.Controls.Add(this.cbox_adjective);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "Form1";
@@ -364,6 +379,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nbox_lengh_of_password)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbox_logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -397,6 +413,7 @@
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clearToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pbox_logo;
     }
 }
 
