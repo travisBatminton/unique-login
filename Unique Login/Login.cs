@@ -49,7 +49,7 @@ namespace Generate_Logins
             return result;
         }
 
-        public string RandomNouns()
+        public string RandomNoun()
         {
             var result = "";
             Random random = new Random();
@@ -61,7 +61,7 @@ namespace Generate_Logins
             return result;
         }
 
-        public string RandomVerbs()
+        public string RandomVerb()
         {
             var result = "";
             Random random = new Random();
