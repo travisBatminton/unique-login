@@ -38,7 +38,7 @@ namespace Unique_Login
         private void btn_copy_username_Click(object sender, EventArgs e)
         {
 
-           if ( string.IsNullOrEmpty(tbox_username.Text))
+           if (string.IsNullOrEmpty(tbox_username.Text))
             {
                 MessageBox.Show("Empty!");
             } else
@@ -134,7 +134,7 @@ namespace Unique_Login
 
 
             // error handling if user didn't select anyhing
-            if (string.IsNullOrEmpty(generatedPassword))
+            if (string.IsNullOrEmpty(generatedPassword) || string.IsNullOrEmpty(generatedUsername))
             {
                 MessageBox.Show("Check at least one username and password type!");
             } else
