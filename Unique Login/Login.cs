@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace Generate_Logins
@@ -16,6 +17,46 @@ namespace Generate_Logins
         public readonly string lowercase = "abcdefghijklmnopqrstuvwxyz";
         public readonly string number = "1234567890";
         public readonly string special = "!@#$%^&*-.";
+
+        public List<string> Items { get; set; }
+
+        public Login()
+        {
+            Items = new List<string>();
+        }
+
+
+        public void addToList(string items)
+        {
+            Items.Add(items);
+        }
+
+        // write all the items in todolist to user given file path
+        public void WriteToFile(string filePath)
+        {
+            try
+            {
+                // write the file
+                using (var writer = new StreamWriter(filePath, false))
+                {
+                    // write each item in todolist line by line
+                    foreach (string item in Items)
+                    {
+                        writer.WriteLine(item);
+                    }
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Could not write to the given file " + filePath);
+            }
+        }
+
+        public void Clear()
+        {
+            Items.Clear();
+        }
+
 
         public string RandomPassword(int lengthOfPassword)
         {

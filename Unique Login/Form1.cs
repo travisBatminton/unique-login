@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -13,12 +14,13 @@ namespace Unique_Login
 {
     public partial class Form1 : Form
     {
+        Login login = new Login();
+        Random random = new Random();
+
         public Form1()
         {
             InitializeComponent();
             nbox_lengh_of_password.Value = 12;
-
-
         }
 
         private void aboutAuthorToolStripMenuItem_Click(object sender, EventArgs e)
@@ -66,9 +68,6 @@ namespace Unique_Login
 
         private void btn_generate_Click(object sender, EventArgs e)
         {
-            Login login = new Login();
-            Random random = new Random();
-
             List<string> usernames = new List<string>();
             List<string> passwords = new List<string>();
 
@@ -147,6 +146,8 @@ namespace Unique_Login
                 tbox_password.Text = randomPassword.ToString();
                 tbox_username.Text = generatedUsername.ToString();
 
+                login.addToList(tbox_password.Text);
+                login.addToList(tbox_username.Text);
             }
         }
 
@@ -164,12 +165,32 @@ namespace Unique_Login
 
             tbox_password.Clear();
             tbox_username.Clear();
+
+            login.Clear();
         }
 
         private void pbox_logo_Click(object sender, EventArgs e)
         {
             ProcessStartInfo sInfo = new ProcessStartInfo("https://www.github.com/wajeht");
             Process.Start(sInfo);
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (tbox_username.Text == "" || tbox_password.Text == "")
+            {
+                MessageBox.Show("Your list is empty!");
+            }
+            else
+            {
+
+                MessageBox.Show("You list has been saved as unique_login.txt to your Desktop!");
+
+                // this will store to user's desktop folder
+                var path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "unique_login.txt");
+                login.WriteToFile(path);
+                
+            }
         }
     }
 }
