@@ -2,4 +2,4 @@
 
 # Unique Login
 
-Built this applicatoin for my brother who was to generate random password and unique usernames for his game credentials.
+Built this window's form desktop applicaion for my brother who likes to generate random passwords and unique usernames for his gaming credentials.
