@@ -27,9 +27,7 @@ namespace Unique_Login
         {
             var message = "This application is written by wajeht. \n";
                 message += "\n https://www.github.com/wajeht";
-
             MessageBox.Show(message);
-
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -47,13 +45,10 @@ namespace Unique_Login
             {
                 System.Windows.Forms.Clipboard.SetText(tbox_username.Text);
             }
-
         }
 
         private void btn_copy_password_Click(object sender, EventArgs e)
         {
-
-
             if (string.IsNullOrEmpty(tbox_password.Text))
             {
                 MessageBox.Show("Password is empty!");
@@ -61,9 +56,7 @@ namespace Unique_Login
             else
             {
                 System.Windows.Forms.Clipboard.SetText(tbox_password.Text);
-
             }
-
         }
 
         private void btn_generate_Click(object sender, EventArgs e)
@@ -71,12 +64,10 @@ namespace Unique_Login
             List<string> usernames = new List<string>();
             List<string> passwords = new List<string>();
 
-
             var generatedUsername = "";
             var generatedPassword = "";
             var lengthOfPassword = nbox_lengh_of_password.Value;
             var randomPassword = "";
-
 
             // usernames control flow below
             if (cbox_adjective.Checked)
@@ -104,7 +95,6 @@ namespace Unique_Login
                 generatedUsername += username;
             }
 
-
             // password contorl flow below
             if (cbox_uppercase.Checked)
             {
@@ -130,7 +120,6 @@ namespace Unique_Login
             {
                 generatedPassword += password;
             }
-
 
             // error handling if user didn't select anyhing
             if (string.IsNullOrEmpty(generatedPassword) || string.IsNullOrEmpty(generatedUsername))
@@ -184,13 +173,11 @@ namespace Unique_Login
             }
             else
             {
-
                 MessageBox.Show("You list has been saved as unique_login.txt to your Desktop!");
 
                 // this will store to user's desktop folder
                 var path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "unique_login.txt");
                 login.WriteToFile(path);
-                
             }
         }
     }
