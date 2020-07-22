@@ -132,7 +132,7 @@
             // btn_generate
             // 
             this.btn_generate.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_generate.Location = new System.Drawing.Point(214, 649);
+            this.btn_generate.Location = new System.Drawing.Point(216, 649);
             this.btn_generate.Margin = new System.Windows.Forms.Padding(1);
             this.btn_generate.Name = "btn_generate";
             this.btn_generate.Size = new System.Drawing.Size(95, 28);
@@ -332,7 +332,7 @@
             // 
             this.aboutAuthorToolStripMenuItem.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.aboutAuthorToolStripMenuItem.Name = "aboutAuthorToolStripMenuItem";
-            this.aboutAuthorToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.aboutAuthorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutAuthorToolStripMenuItem.Text = "About author";
             this.aboutAuthorToolStripMenuItem.Click += new System.EventHandler(this.aboutAuthorToolStripMenuItem_Click);
             // 
@@ -374,6 +374,7 @@
             this.Controls.Add(this.cbox_animal);
             this.Controls.Add(this.cbox_adjective);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(1);

@@ -42,7 +42,7 @@ namespace Unique_Login
 
            if (string.IsNullOrEmpty(tbox_username.Text))
             {
-                MessageBox.Show("Empty!");
+                MessageBox.Show("Username is empty!");
             } else
             {
                 System.Windows.Forms.Clipboard.SetText(tbox_username.Text);
@@ -56,7 +56,7 @@ namespace Unique_Login
 
             if (string.IsNullOrEmpty(tbox_password.Text))
             {
-                MessageBox.Show("Empty!");
+                MessageBox.Show("Password is empty!");
             }
             else
             {
