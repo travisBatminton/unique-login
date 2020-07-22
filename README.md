@@ -2,4 +2,4 @@
 
 # Unique Login
 
-Built this applicatoin for my brother who was to generate random password and unique usernames for his game credentials.
+Built this window's form desktop applicaion for my brother who likes to generate random passwords and unique usernames for his gaming credentials. It uses combination of animal names, verbs, adjectives and names for username and random alphabets, numeric and special characters for password. I've also implimaent generated logins to save it into file to your desktop. Nothing more, nothing else. Enojy!
