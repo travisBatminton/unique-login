@@ -146,8 +146,9 @@ namespace Unique_Login
                 tbox_password.Text = randomPassword.ToString();
                 tbox_username.Text = generatedUsername.ToString();
 
-                login.addToList(tbox_password.Text);
-                login.addToList(tbox_username.Text);
+                login.addToList("Username: " + tbox_username.Text);
+                login.addToList("Password: " +tbox_password.Text);
+                login.addToList(Environment.NewLine);
             }
         }
 
